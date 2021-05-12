@@ -1,0 +1,129 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #444444;
+    overflow:hidden;
+}
+
+#start-button {
+    color: #237b23;
+    font-size: 30px;
+    position: fixed;
+    top: 80px;
+    left: 300px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1500px;
+    height: 100vh;
+    background-color: #191919;
+    border-left: solid 4px #5d5d5d;
+    border-right: solid 4px #5d5d5d;
+}
+
+.title > pre {
+    color: #37a537;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    width: 595px;
+}
+
+.game {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1400px;
+    height: 710px;
+    background-color: #8c8c8c;
+    border-radius: 50px 50px;
+    border: solid 4px #adadad;
+}
+
+a.pop-up {
+    position: absolute;
+}
+
+img {
+    transform: scale(0.5);
+}
+
+img {
+    position: absolute;
+    transform: scale(0.5);
+}
+
+.player-prop {
+    z-index: 11 !important;
+}
+
+.image-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1400px;
+    height: 710px;
+}
+
+.player-overlay {
+    display:none;
+    position: fixed;
+    z-index: 9999;
+    background: #000000;
+    border: solid 10px #237b23;
+    padding: 20px;
+}
+
+.player-overlay > h2 {
+    font-size: 40px;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.player-overlay#player1 {
+    bottom: 30px;
+    left: 30px;
+}
+
+.player-overlay#player2 {
+    right: 30px;
+    bottom: 30px;
+}
+
+.player-overlay#announcer {
+    top: 10px;
+    left: 10px;
+}
+.player-overlay#announcer > h2 {
+    background-image: none;
+    -webkit-background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+    color: white;
+    font-size: 30px;
+}
+
+#count-text {
+    color: orange;
+}
+
+#timer {
+    color: orange;
+}
+
+.blink > h2 {
+    animation: blinker 0.75s linear infinite;
+}
+
+a.blink {
+    animation: blinker 0.75s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
+}
