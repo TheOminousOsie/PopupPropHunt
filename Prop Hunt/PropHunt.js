@@ -73,13 +73,7 @@ function clickHandle(ev) {
     }
     if (hunterStarted) {
         var attemptsLeft = Number(document.getElementById("click-count").innerText);
-        if (attemptsLeft <= 0 && (prop1 || prop2)) {
-            document.getElementById("announcer").innerHTML = "<h2>PROPS WIN!</h2>";
-            if (prop1) prop1.classList.add("blink")
-            if (prop2) prop2.classList.add("blink")
-            gameOverEvent();
-        }
-        else if (prop1 && popUp.id == prop1.id) {
+        if (prop1 && popUp.id == prop1.id) {
             prop1.parentNode.removeChild(prop1);
             prop1 = null;
             document.getElementById("player1").innerHTML = "<h2>YOU ARE DEAD</h2>";
@@ -90,6 +84,12 @@ function clickHandle(ev) {
             prop2 = null;
             document.getElementById("player2").innerHTML = "<h2>YOU ARE DEAD</h2>";
             document.getElementById("player2").style.border = "solid 10px #ff0000";
+        }
+        else if (attemptsLeft <= 1 && (prop1 || prop2)) {
+            document.getElementById("announcer").innerHTML = "<h2>PROPS WIN!</h2>";
+            if (prop1) prop1.classList.add("blink")
+            if (prop2) prop2.classList.add("blink")
+            gameOverEvent();
         }
         else {
             attemptsLeft--;
